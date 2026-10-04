@@ -65,3 +65,9 @@ test('a log resumes from an existing file and stays valid', () => {
   again.append('d');
   assert.equal(verifyFile(file).count, 4);
 });
+
+test('a log written by the Node example verifies (the Java example checks the same file)', () => {
+  const result = verifyFile(new URL('../../testdata/audit-sample.jsonl', import.meta.url).pathname);
+  assert.equal(result.ok, true);
+  assert.equal(result.count, 3);
+});
