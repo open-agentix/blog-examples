@@ -53,6 +53,8 @@ Each core is small enough to read in one sitting. Loop, policy gate, audit log a
 - isolation for tools and code that run, instead of path checks;
 - running different harnesses and model providers behind the same control layer.
 
+Questions and discussion: [GitHub Discussions](https://github.com/open-agentix/blog-examples/discussions) and [Issues](https://github.com/open-agentix/blog-examples/issues). General contact: info@openagentix.si.
+
 ## License
 
 [Apache License 2.0](LICENSE). Contributions are welcome under the same license; please sign off your commits (`git commit -s`).
