@@ -12,8 +12,7 @@ export const canonical = (value) =>
       ? Object.fromEntries(Object.entries(v).sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0)))
       : v);
 
-const digest = ({ seq, ts, event, data, prev }) =>
-  createHash('sha256').update(canonical({ seq, ts, event, data, prev })).digest('hex');
+const digest = ({ hash, ...body }) => createHash('sha256').update(canonical(body)).digest('hex');
 
 /** Check a list of entries. Returns { ok, count } or { ok: false, error }. */
 export function verifyEntries(entries) {
