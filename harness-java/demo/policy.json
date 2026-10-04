@@ -1,0 +1,6 @@
+{
+  "rules": [
+    { "tool": "read_file", "effect": "allow", "args": { "path": { "prefix": "notes/" } }, "reason": "notes/ is readable" },
+    { "tool": "read_file", "effect": "approve", "args": { "path": { "prefix": "reports/" } }, "reason": "reports/ needs a human" }
+  ]
+}
